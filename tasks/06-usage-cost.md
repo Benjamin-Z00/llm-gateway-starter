@@ -4,6 +4,8 @@
 
 建立 LLM 应用的成本意识。
 
+完成这个任务后，你应该能理解：AI 应用的成本不是上线后才看的指标，而是设计阶段就要进入后端链路。
+
 ## 你要阅读
 
 - `app/services/tokenizer.py`
@@ -23,6 +25,15 @@ GET /v1/usage
 - `request_count` 增加
 - `input_tokens` 和 `output_tokens` 增加
 - `total_cost_cny` 有记录
+
+## 可交付结果
+
+在作品集里写清楚：
+
+```text
+我在 Gateway 层统一记录请求次数、输入 Token、输出 Token 和估算成本。
+这样团队可以按模型、接口或业务场景分析 AI 调用成本，并为后续限流、套餐和报价提供依据。
+```
 
 ## 进阶
 

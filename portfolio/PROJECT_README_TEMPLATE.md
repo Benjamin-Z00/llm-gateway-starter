@@ -1,5 +1,7 @@
 # LLM Gateway 项目作品集说明
 
+> 建议复制这个文件，改成你自己的项目 README。不要只保留模板文字，要补充你的运行结果、接口截图或测试输出。
+
 ## 项目背景
 
 这个项目实现了一个 LLM Gateway，用于统一管理业务系统对大模型的调用。
@@ -51,6 +53,22 @@ Client
 在这里贴 pytest 输出或截图说明
 ```
 
+## 本地运行方式
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e ".[dev]"
+pytest
+uvicorn app.main:app --reload
+```
+
+接口文档：
+
+```text
+http://127.0.0.1:8000/docs
+```
+
 ## 可展示接口
 
 ```bash
@@ -62,6 +80,16 @@ curl -X POST http://127.0.0.1:8000/v1/chat \
 ## 面试讲法
 
 这个项目不是一个普通聊天 Demo，而是一个 Agent 系统的底层基础设施。它把模型调用从业务代码里抽离出来，统一处理结构化输出、重试、成本、延迟和流式响应。后续 Tool Runtime、RAG、Agent Loop 都可以复用这个 Gateway。
+
+## 我遇到的问题和处理方式
+
+可以补充：
+
+- 环境问题：
+- 接口调试问题：
+- 结构化输出校验问题：
+- 测试补充：
+- 我如何定位和解决：
 
 ## 后续扩展
 
